@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - version 1.0</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/cascadia-code@4.2.1/index.min.css">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/cascadia-code@4.2.1/index.min.css"></head>
+<body>
+    <div class="maincontainer">
+        <div id="menu-container"></div>
+        <div class="header"></div>
+        <img class="welcomebanner" src="/images/welcome.gif" alt="welcomebanner">
+        <div class="aboutvon">
+            <h3>About Von Ace</h3>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        </div>
+    </div>
+    <script src="./JS/script.js"></script>
+    <script>
+        fetch('menu.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('menu-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading menu:', error));
+    </script>
+</body>
+</html>
